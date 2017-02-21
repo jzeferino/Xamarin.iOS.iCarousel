@@ -38,6 +38,45 @@ View.AddSubview(carousel);
 ViewDidLayoutSubviews();
 ```
 
+## Carousel Types
+
+iCarousel supports the following built-in display types:
+
+- iCarouselTypeLinear
+- iCarouselTypeRotary
+- iCarouselTypeInvertedRotary
+- iCarouselTypeCylinder
+- iCarouselTypeInvertedCylinder
+- iCarouselTypeWheel
+- iCarouselTypeInvertedWheel
+- iCarouselTypeCoverFlow
+- iCarouselTypeCoverFlow2
+- iCarouselTypeTimeMachine
+- iCarouselTypeInvertedTimeMachine
+
+## Implementation notes:
+
+The following methods, when overrided, must remove the base.xxx() or it will throw `Foundation.You_Should_Not_Call_base_In_This_Method`.
+This is due a requirement from optional objective C methods implemented in C#.
+ * iCarouselDataSource
+- NumberOfPlaceholdersInCarousel
+- PlaceholderViewAtIndex
+
+ * iCarouselDelegate
+- CarouselWillBeginScrollingAnimation
+- CarouselDidEndScrollingAnimation
+- CarouselDidScroll
+- CarouselCurrentItemIndexDidChange
+- CarouselWillBeginDragging
+- CarouselDidEndDragging
+- CarouselWillBeginDecelerating
+- CarouselDidEndDecelerating
+- ShouldSelectItemAtIndex
+- DidSelectItemAtIndex
+- CarouselItemWidth
+- ItemTransformForOffset
+- ValueForOption
+
 ### Please check the original [README](https://github.com/nicklockwood/iCarousel/blob/master/README.md) for more information.
  
 ### License
