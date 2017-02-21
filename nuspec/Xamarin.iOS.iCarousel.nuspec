@@ -7,7 +7,7 @@
     <authors>jzeferino</authors>
     <licenseUrl>https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/jzeferino/Xamarin.iOS.iCarousel</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>A simple, highly customisable, data-driven 3D carousel for iOS.</description>    
     <tags>xamarin, ios, carousel, iCarousel</tags>
   </metadata>
