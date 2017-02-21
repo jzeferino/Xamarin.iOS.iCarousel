@@ -17,7 +17,7 @@ A simple, highly customisable, data-driven 3D carousel for iOS.
 
 ### Step 1
 
-Instal NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
+Install NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
 
 ### Step 2
 
