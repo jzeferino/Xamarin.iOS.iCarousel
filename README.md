@@ -8,7 +8,9 @@ This is a Xamarin Android Binding for the [iCarousel](https://github.com/nickloc
 A simple, highly customisable, data-driven 3D carousel for iOS.
 
 ## Demo
-![iCarousel](art/iCarousel.gif)
+<p align="center">
+  <img src="https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/art/icarousel.gif?raw=true"/>
+</p>
 
 ## Usage
 (see the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example)
