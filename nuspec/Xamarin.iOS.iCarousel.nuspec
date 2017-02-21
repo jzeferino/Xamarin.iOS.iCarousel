@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.iOS.iCarousel</id>
+    <version>$version$</version>
+    <title>Xamarin.iOS.iCarousel</title>
+    <authors>jzeferino</authors>
+    <licenseUrl>https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jzeferino/Xamarin.iOS.iCarousel</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple, highly customisable, data-driven 3D carousel for iOS.</description>    
+    <tags>xamarin, ios, carousel, iCarousel</tags>
+  </metadata>
+  <files>
+    <file src="src/Xamarin.iOS.iCarousel.Binding/bin/Release/Xamarin.iOS.iCarousel.Binding.dll" target="lib/Xamarin.iOS10/Xamarin.iOS.iCarousel.Binding.dll" />
+  </files>
+</package>

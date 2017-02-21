@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.iOS.iCarousel.Example", "Xamarin.iOS.iCarousel.Example.csproj", "{EB798BCD-6F57-4643-8C49-30C4ACDF706F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Release|iPhone.ActiveCfg = Release|iPhone
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Release|iPhone.Build.0 = Release|iPhone
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{EB798BCD-6F57-4643-8C49-30C4ACDF706F}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
