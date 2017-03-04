@@ -3,7 +3,7 @@
 Xamarin.iOS.iCarousel
 ===================
 
-This is a Xamarin Android Binding for the [iCarousel](https://github.com/nicklockwood/iCarousel).
+This is a Xamarin iOS Binding for the [iCarousel](https://github.com/nicklockwood/iCarousel).
 
 A simple, highly customisable, data-driven 3D carousel for iOS.
 
