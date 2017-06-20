@@ -54,15 +54,16 @@ iCarousel supports the following built-in display types:
 - iCarouselTypeTimeMachine
 - iCarouselTypeInvertedTimeMachine
 
-## Implementation notes:
+# IMPORTANT NOTE:
 
-The following methods, when overrided, must remove the base.xxx() or it will throw `Foundation.You_Should_Not_Call_base_In_This_Method`.
+When overriding one of the following methods from `iCarouselDataSource` and `iCarouselDelegate`, you must remove the base.xxx() call or it will throw `Foundation.You_Should_Not_Call_base_In_This_Method`.
 This is due a requirement from optional objective C methods implemented in C#.
- * iCarouselDataSource
+
+* **iCarouselDataSource**
 - NumberOfPlaceholdersInCarousel
 - PlaceholderViewAtIndex
 
- * iCarouselDelegate
+ * **iCarouselDelegate**
 - CarouselWillBeginScrollingAnimation
 - CarouselDidEndScrollingAnimation
 - CarouselDidScroll
