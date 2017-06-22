@@ -13,7 +13,7 @@ var libProject = new FilePath("src/Xamarin.iOS.iCarousel.Binding/Xamarin.iOS.iCa
 var artifactsDirectory = new DirectoryPath("artifacts");
 
 // Versioning.
-var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "1.8.4");
+var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "9.9.9-build9");
 
 Setup((context) =>
 {
