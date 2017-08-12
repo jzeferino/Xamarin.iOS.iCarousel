@@ -82,7 +82,7 @@ namespace Xamarin.iOS.iCarouselExample
             }
         }
 
-        public class SimpleDelegate : iCarouselDelegate
+        public class SimpleDelegate : CarouselDelegate
         {
             private readonly ViewController _viewController;
 
@@ -93,10 +93,16 @@ namespace Xamarin.iOS.iCarouselExample
 
             public override void DidSelectItemAtIndex(iCarousel carousel, nint index)
             {
+                base.DidSelectItemAtIndex(carousel, index);
                 var alert = UIAlertController.Create("Clicked index:", index.ToString(), UIAlertControllerStyle.Alert);
                 alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Cancel, null));
 
                 _viewController.PresentViewController(alert, animated: true, completionHandler: null);
+            }
+
+            public override nfloat ValueForOption(iCarousel carousel, iCarouselOption option, nfloat value)
+            {
+                return base.ValueForOption(carousel, option, value);
             }
         }
     }
