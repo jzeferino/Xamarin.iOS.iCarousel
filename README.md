@@ -13,7 +13,6 @@ A simple, highly customisable, data-driven 3D carousel for iOS.
 </p>
 
 ## Usage
-(see the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example)
 
 ### Step 1
 
@@ -37,6 +36,8 @@ var carousel = new iCarousel
 View.AddSubview(carousel);
 ViewDidLayoutSubviews();
 ```
+
+see the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example.
 
 ## Carousel Types
 
