@@ -1,15 +1,16 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/rk8n3fe0c6udgurg?svg=true)](https://ci.appveyor.com/project/jzeferino/xamarin-ios-icarousel/)   [![NuGet](https://img.shields.io/nuget/v/Xamarin.iOS.iCarousel.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/)
+[![Build Status](https://www.bitrise.io/app/99f2701ee4ad98e4/status.svg?token=SJ_Df8WHxCGLlFYhbq3dhQ&branch=master)](https://www.bitrise.io/app/99f2701ee4ad98e4)
+[![NuGet](https://img.shields.io/nuget/v/Xamarin.iOS.iCarousel.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/)
 
 Xamarin.iOS.iCarousel
 ===================
 
-This is a Xamarin iOS Binding for the [iCarousel](https://github.com/nicklockwood/iCarousel).
+This is a Xamarin iOS Binding for the [iCarousel](https://github.com/nicklockwood/iCarousel) library.
 
 A simple, highly customisable, data-driven 3D carousel for iOS.
 
 ## Demo
 <p align="center">
-  <img src="https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/art/icarousel.gif?raw=true"/>
+  <img src="https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/art/icarousel.gif" align="left" width="300"/>
 </p>
 
 ## Usage
