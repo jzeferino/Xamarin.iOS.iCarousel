@@ -9,14 +9,16 @@ This is a Xamarin iOS Binding for the [iCarousel](https://github.com/nicklockwoo
 A simple, highly customisable, data-driven 3D carousel for iOS.
 
 ## Demo
-<p align="center">
-  <img src="https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/art/icarousel.gif" align="left" width="300"/>
-</p>
 
-### Usage
+<br/>
+<br/>
 
-1. Install NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
-2. Add the iCarousel to your layout:
+<img src="https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/art/icarousel.gif" align="left" width="300"/>
+
+## Usage
+
+ 1. Install NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
+ 2. Add the iCarousel to your layout:
 
 ```c#
 var carousel = new iCarousel
@@ -34,8 +36,16 @@ View.AddSubview(carousel);
 ViewDidLayoutSubviews();
 ```
 <br/>
+<br/>
+<br/>
+<br/>
 
-- Open the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example.
+* Open the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example.
+
+# IMPORTANT NOTE:
+
+When overriding one of the following methods from `iCarouselDataSource` and `iCarouselDelegate`, you must remove the base.xxx() call or it will throw `Foundation.You_Should_Not_Call_base_In_This_Method`.
+This is due a requirement from optional objective C methods implemented in C#.
 
 ## Carousel Types
 
@@ -52,11 +62,6 @@ iCarousel supports the following built-in display types:
 - iCarouselTypeCoverFlow2
 - iCarouselTypeTimeMachine
 - iCarouselTypeInvertedTimeMachine
-
-# IMPORTANT NOTE:
-
-When overriding one of the following methods from `iCarouselDataSource` and `iCarouselDelegate`, you must remove the base.xxx() call or it will throw `Foundation.You_Should_Not_Call_base_In_This_Method`.
-This is due a requirement from optional objective C methods implemented in C#.
 
 * **iCarouselDataSource**
 - NumberOfPlaceholdersInCarousel
