@@ -13,15 +13,11 @@ A simple, highly customisable, data-driven 3D carousel for iOS.
   <img src="https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/art/icarousel.gif" align="left" width="300"/>
 </p>
 
-## Usage
+### Usage
 
-### Step 1
+1. Install NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
+2. Add the iCarousel to your layout:
 
-Install NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
-
-### Step 2
-
-Add the iCarousel to your layout:
 ```c#
 var carousel = new iCarousel
 {
@@ -37,8 +33,9 @@ var carousel = new iCarousel
 View.AddSubview(carousel);
 ViewDidLayoutSubviews();
 ```
+<br/>
 
-see the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example.
+- Open the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example.
 
 ## Carousel Types
 
