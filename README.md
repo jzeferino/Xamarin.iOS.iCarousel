@@ -3,19 +3,20 @@
 Xamarin.iOS.iCarousel
 ===================
 
-This is a Xamarin Android Binding for the [iCarousel](https://github.com/nicklockwood/iCarousel).
+This is a Xamarin iOS Binding for the [iCarousel](https://github.com/nicklockwood/iCarousel).
 
 A simple, highly customisable, data-driven 3D carousel for iOS.
 
 ## Demo
-![iCarousel](art/iCarousel.gif)
+<p align="center">
+  <img src="https://github.com/jzeferino/Xamarin.iOS.iCarousel/blob/master/art/icarousel.gif?raw=true"/>
+</p>
 
 ## Usage
-(see the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example)
 
 ### Step 1
 
-Instal NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
+Install NuGet [package](https://www.nuget.org/packages/Xamarin.iOS.iCarousel/).
 
 ### Step 2
 
@@ -35,6 +36,48 @@ var carousel = new iCarousel
 View.AddSubview(carousel);
 ViewDidLayoutSubviews();
 ```
+
+see the [sample](https://github.com/jzeferino/Xamarin.iOS.iCarousel/tree/master/src/Xamarin.iOS.iCarousel.Example) project for a detailed working example.
+
+## Carousel Types
+
+iCarousel supports the following built-in display types:
+
+- iCarouselTypeLinear
+- iCarouselTypeRotary
+- iCarouselTypeInvertedRotary
+- iCarouselTypeCylinder
+- iCarouselTypeInvertedCylinder
+- iCarouselTypeWheel
+- iCarouselTypeInvertedWheel
+- iCarouselTypeCoverFlow
+- iCarouselTypeCoverFlow2
+- iCarouselTypeTimeMachine
+- iCarouselTypeInvertedTimeMachine
+
+# IMPORTANT NOTE:
+
+When overriding one of the following methods from `iCarouselDataSource` and `iCarouselDelegate`, you must remove the base.xxx() call or it will throw `Foundation.You_Should_Not_Call_base_In_This_Method`.
+This is due a requirement from optional objective C methods implemented in C#.
+
+* **iCarouselDataSource**
+- NumberOfPlaceholdersInCarousel
+- PlaceholderViewAtIndex
+
+ * **iCarouselDelegate**
+- CarouselWillBeginScrollingAnimation
+- CarouselDidEndScrollingAnimation
+- CarouselDidScroll
+- CarouselCurrentItemIndexDidChange
+- CarouselWillBeginDragging
+- CarouselDidEndDragging
+- CarouselWillBeginDecelerating
+- CarouselDidEndDecelerating
+- ShouldSelectItemAtIndex
+- DidSelectItemAtIndex
+- CarouselItemWidth
+- ItemTransformForOffset
+- ValueForOption
 
 ### Please check the original [README](https://github.com/nicklockwood/iCarousel/blob/master/README.md) for more information.
  
