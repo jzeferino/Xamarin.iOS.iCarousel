@@ -1,7 +1,8 @@
-#addin Cake.SemVer
+#addin nuget:?package=Cake.SemVer&version=2.0.0
+#addin nuget:?package=semver&version=2.0.4
 
 // Enviroment
-var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
+var isRunningBitrise = Bitrise.IsRunningOnBitrise;
 
 // Arguments.
 var target = Argument("target", "Default");
@@ -13,11 +14,11 @@ var libProject = new FilePath("src/Xamarin.iOS.iCarousel.Binding/Xamarin.iOS.iCa
 var artifactsDirectory = new DirectoryPath("artifacts");
 
 // Versioning.
-var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "1.8.4");
+var version = CreateSemVer(1, 8, 4);
 
 Setup((context) =>
 {
-	Information("AppVeyor: {0}", isRunningOnAppVeyor);
+	Information("Bitrise: {0}", isRunningBitrise);
 	Information("Configuration: {0}", configuration);
 });
 
@@ -51,10 +52,12 @@ Task("Build")
 
 Task ("NuGet")
 	.IsDependentOn ("Build")
+	.WithCriteria(isRunningBitrise)
 	.Does (() =>
 	{
-		var sv = ParseSemVer (version);
-		var nugetVersion = CreateSemVer (sv.Major, sv.Minor, sv.Patch).ToString();
+		Information("Nuget version: {0}", version);
+		
+  		var nugetVersion = Bitrise.Environment.Repository.GitBranch == "master" ? version.ToString() : version.Change(prerelease: "pre" + Bitrise.Environment.Build.BuildNumber).ToString();
 		
 		NuGetPack ("./nuspec/Xamarin.iOS.iCarousel.nuspec", 
 			new NuGetPackSettings 
