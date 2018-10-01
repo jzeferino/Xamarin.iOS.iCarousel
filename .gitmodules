@@ -1,0 +1,3 @@
+[submodule "src_original"]
+	path = src_original
+	url = https://github.com/jzeferino/iCarousel
