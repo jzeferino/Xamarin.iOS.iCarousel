@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using FFImageLoading;
 using UIKit;
 using Xamarin.iOS.iCarouselBinding;
+using Xamarin.iOS.iCarouselExample.Extensions;
 
 namespace Xamarin.iOS.iCarouselExample
 {
@@ -25,10 +27,11 @@ namespace Xamarin.iOS.iCarouselExample
             var carousel = new iCarousel
             {
                 Bounds = View.Bounds,
-                ContentMode = UIViewContentMode.Center,
-                Type = iCarouselType.CoverFlow2,
+                ContentMode = UIViewContentMode.ScaleAspectFit,
+                Type = iCarouselType.Rotary,
                 Frame = View.Frame,
                 CenterItemWhenSelected = true,
+                PagingEnabled = true,
                 DataSource = new SimpleDataSource(items),
                 Delegate = new SimpleDelegate(this)
             };
@@ -55,10 +58,9 @@ namespace Xamarin.iOS.iCarouselExample
                 // create new view if no view is available for recycling
                 if (view == null)
                 {
-                    var imgView = new UIImageView(new RectangleF(0, 200, 200, 200))
+                    var imgView = new UIImageView(new RectangleF(0, 0, (float)carousel.Frame.Height, (float)carousel.Frame.Width))
                     {
-                        BackgroundColor = UIColor.Orange,
-                        ContentMode = UIViewContentMode.Center
+                        BackgroundColor = UIColor.Orange
                     };
 
                     label = new UILabel(imgView.Bounds)
@@ -78,25 +80,14 @@ namespace Xamarin.iOS.iCarouselExample
 
                 label.Text = _data[(int)index].ToString();
 
+                // NOT working
+                /*ImageService.Instance
+                  .LoadUrl("https://picsum.photos/1000/2000" + "?=" + DateTime.Now.Ticks)
+                  .Into((view as UIImageView));*/
+
+                // Working
+                (view as UIImageView).LoadImageAsync("https://picsum.photos/1000/2000" + "?=" + DateTime.Now.Ticks);
                 return view;
-            }
-        }
-
-        public class SimpleDelegate : iCarouselDelegate
-        {
-            private readonly ViewController _viewController;
-
-            public SimpleDelegate(ViewController vc)
-            {
-                _viewController = vc;
-            }
-
-            public override void DidSelectItemAtIndex(iCarousel carousel, nint index)
-            {
-                var alert = UIAlertController.Create("Clicked index:", index.ToString(), UIAlertControllerStyle.Alert);
-                alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Cancel, null));
-
-                _viewController.PresentViewController(alert, animated: true, completionHandler: null);
             }
         }
     }
